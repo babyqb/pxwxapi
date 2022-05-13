@@ -1,0 +1,4778 @@
+{
+    "schemes": [
+      
+    ],
+    "swagger": "2.0",
+    "info": {
+      "description": "VX 的API接口,联系微信 thoukulele",
+      "title": "VX-API",
+      "contact": {
+        
+      },
+      "version": "1.0"
+    },
+    "host": "",
+    "basePath": "",
+    "paths": {
+      "/chatRoom/AddChatRoomMember": {
+        "post": {
+          "description": "添加群成员",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "群管理"
+          ],
+          "summary": "添加群成员",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.AddRoomReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/chatRoom/CreateChatRoom": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "群管理"
+          ],
+          "summary": "创建群聊",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.CreateChatRoomModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/chatRoom/EnterGroupByQRCodeUrl": {
+        "post": {
+          "description": "扫码进群",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "群管理"
+          ],
+          "summary": "扫码进群",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.EnterGroupByQRCodeUrlReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/chatRoom/GetChatroomMembers": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "群管理"
+          ],
+          "summary": "获取群成员信息",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.GetChatroomMembersModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/chatRoom/GroupList": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "群管理"
+          ],
+          "summary": "同步群",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.GroupListParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/chatRoom/InviteChatroomMembers": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "群管理"
+          ],
+          "summary": "邀请加入群",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.InviteChatroomMembersModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/chatRoom/QuitChatroom": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "群管理"
+          ],
+          "summary": "退出群聊",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.QuitChatroomModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/chatRoom/UpdateGroupAnnouncement": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "群管理"
+          ],
+          "summary": "更新群公告",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.UpdateChatroomAnnouncementModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/common/GetA8Key": {
+        "post": {
+          "description": "获取A8Key",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "其他接口"
+          ],
+          "summary": "获取A8Key",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.GetA8keyReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/common/GetA8Key3rd": {
+        "post": {
+          "description": "A8Key3rd授权",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "其他接口"
+          ],
+          "summary": "A8Key3rd授权",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.GetA8keyReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/common/GetAppMsgExt": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "其他接口"
+          ],
+          "summary": "阅读",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.ReadUrlReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/common/GetSessionId": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "其他接口"
+          ],
+          "summary": "获取小程序sessionid",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SessionReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/common/JSAPIPreVerify": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "其他接口"
+          ],
+          "summary": "公众号JSAPI",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.GetkeyParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/common/JsLogin": {
+        "post": {
+          "description": "小程序授权获取code",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "其他接口"
+          ],
+          "summary": "小程序授权获取code",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.JsLoginReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/common/JsOperateWxData": {
+        "post": {
+          "description": "获取小程序授权信息（encryptedData,iv等）",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "其他接口"
+          ],
+          "summary": "获取小程序授权信息（encryptedData,iv等）",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.JsLoginReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/common/SdkOauthAuthorizeConfirm": {
+        "post": {
+          "description": "app授权登录",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "其他接口"
+          ],
+          "summary": "app授权登录",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.JsLoginReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/common/TxVote": {
+        "post": {
+          "description": "\"Option\"不写内容，即返回投票内容和序号，不会进行投票，如不显示序号，可由0开始按顺序数，得到序号\n如进行投票，必需在\"Option\"写上投票序号，文中可能有多项投票，每项都有多个选择（Option)，\n例如：某文有两个投票项目，一个数组有7项，可以多选，序号便是0到6，注意不是1到6， 另一个数组有6项，单选，序号是0到5\n在\"Option\"写上：\"[0,1,6],[5]\"\n意思是一个项目投票给0,1,6三个序号，另一个项目投票给序号5，注意如果单选写了多个序号或其它不符合投票规则，投票会不成功",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "其他接口"
+          ],
+          "summary": "投票",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.TxVoteReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/contact/AddFriend": {
+        "post": {
+          "description": "加好友请求",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "通讯录"
+          ],
+          "summary": "加好友请求",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.AddMFriendReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/contact/Flag": {
+        "post": {
+          "description": "修改和某通讯录关系状态",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "通讯录"
+          ],
+          "summary": "修改和某通讯录关系状态",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.FlagReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/contact/FriendDel": {
+        "post": {
+          "description": "删除好友",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "通讯录"
+          ],
+          "summary": "删除好友",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.FriendDeleteReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/contact/GetContact": {
+        "post": {
+          "description": "获取通讯录好友详情包含标签id",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "通讯录"
+          ],
+          "summary": "获取通讯录好友详情包含标签id",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.GetContactReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/contact/GetContactList": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "通讯录"
+          ],
+          "summary": "获取通讯录好友",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.GetContactListModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/contact/GetContractDetails": {
+        "post": {
+          "description": "获取通讯录好友详情(100上限)",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "通讯录"
+          ],
+          "summary": "获取通讯录好友详情(100上限)",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.GetFriendsReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/contact/GetFriendRelation": {
+        "post": {
+          "description": "获取好友关系",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "通讯录"
+          ],
+          "summary": "获取好友关系",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SearchContactReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/contact/GetMFriend": {
+        "post": {
+          "description": "获取手机通讯录好友",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "通讯录"
+          ],
+          "summary": "获取手机通讯录好友",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.GetMFriendReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/contact/Lbs": {
+        "post": {
+          "description": "附近人",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "通讯录"
+          ],
+          "summary": "附近人",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.LbsFindParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/contact/PassVerify": {
+        "post": {
+          "description": "通过好友请求",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "通讯录"
+          ],
+          "summary": "通过好友请求",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.PassVerifyReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/contact/SayHelloOne": {
+        "post": {
+          "description": "爆粉模式1",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "通讯录"
+          ],
+          "summary": "爆粉模式1",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SayHelloOneReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/contact/SearchContact": {
+        "post": {
+          "description": "搜索联系人",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "通讯录"
+          ],
+          "summary": "搜索联系人",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SearchContactReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/contact/SetRemarks": {
+        "post": {
+          "description": "设置好友备注",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "通讯录"
+          ],
+          "summary": "设置好友备注",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SetRemaekReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/contact/UploadMContact": {
+        "post": {
+          "description": "上传联系人",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "通讯录"
+          ],
+          "summary": "上传联系人",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.UploadContractReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/favor/Add": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "收藏"
+          ],
+          "summary": "添加收藏",
+          "parameters": [
+            {
+              "description": "请联系客服获取相关参数说明",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.AddFavParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/favor/Del": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "收藏"
+          ],
+          "summary": "删除收藏",
+          "parameters": [
+            {
+              "description": "FavId在同步收藏中获取",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.DelFavParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/favor/GetFavInfo": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "收藏"
+          ],
+          "summary": "获取搜藏信息",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.ReqModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/favor/GetFavItem": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "收藏"
+          ],
+          "summary": "读取收藏内容",
+          "parameters": [
+            {
+              "description": "请求参数:FavId在同步收藏中获取",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.GetFavItemParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/favor/Sync": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "收藏"
+          ],
+          "summary": "同步收藏",
+          "parameters": [
+            {
+              "description": "请求参数:keybuf:第二次请求需要带上第一次返回的",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SyncParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/finder/Comment": {
+        "post": {
+          "description": "评论",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "视频号"
+          ],
+          "summary": "评论",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.CommentParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/finder/FinderBatchGetObjectAsyncLoadInfo": {
+        "post": {
+          "description": "直播预告",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "视频号"
+          ],
+          "summary": "直播预告",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.FinderBatchGetObjectAsyncLoadInfoParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/finder/FinderLiveDetail": {
+        "post": {
+          "description": "直播详情",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "视频号"
+          ],
+          "summary": "直播详情",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.FinderLiveDetailParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/finder/FinderSearchList": {
+        "post": {
+          "description": "搜索列表",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "视频号"
+          ],
+          "summary": "搜索列表",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.GetRecommendParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/finder/FinderSendText": {
+        "post": {
+          "description": "发送私信文字",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "视频号"
+          ],
+          "summary": "发送私信文字",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.FinderSendTextParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/finder/Findergetlivemsg": {
+        "post": {
+          "description": "直播内容详情",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "视频号"
+          ],
+          "summary": "直播内容详情",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.FindergetlivemsgParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/finder/Findergettopiclist": {
+        "post": {
+          "description": "主题列表",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "视频号"
+          ],
+          "summary": "主题列表",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.FinderGetTopicListParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/finder/Follow": {
+        "post": {
+          "description": "关注",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "视频号"
+          ],
+          "summary": "关注",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.DefaultParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/finder/GetCommentDetail": {
+        "post": {
+          "description": "查看指定评论内容",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "视频号"
+          ],
+          "summary": "查看指定评论内容",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.GetCommentDetailParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/finder/GetRecommend": {
+        "post": {
+          "description": "推荐",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "视频号"
+          ],
+          "summary": "推荐",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.GetRecommendParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/finder/Like": {
+        "post": {
+          "description": "点赞",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "视频号"
+          ],
+          "summary": "点赞",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.LikeParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/finder/Search": {
+        "post": {
+          "description": "用户搜索",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "视频号"
+          ],
+          "summary": "用户搜索",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.DefaultParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/finder/TargetUserPage": {
+        "post": {
+          "description": "查看指定人首页",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "视频号"
+          ],
+          "summary": "查看指定人首页",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.TargetUserPageParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/finder/UserPrepare": {
+        "post": {
+          "description": "用户中心",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "视频号"
+          ],
+          "summary": "用户中心",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.ReqModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/friendCircle/GetIdDetail": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "朋友圈"
+          ],
+          "summary": "获取特定ID详情内容",
+          "parameters": [
+            {
+              "description": "请求参数:Id为当前朋友圈内容的id",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.GetIdDetailParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/friendCircle/Messages": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "朋友圈"
+          ],
+          "summary": "发布朋友圈",
+          "parameters": [
+            {
+              "description": "请求参数:请自行构造xml内容,注意:如果发的不是视频ISVideo记得提交false",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.Messagearameter"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/friendCircle/SendFriendCircle": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "朋友圈"
+          ],
+          "summary": "发送朋友圈",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SnsPostItemModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/friendCircle/SendFriendCircleComment": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "朋友圈"
+          ],
+          "summary": "点赞评论",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SendFriendCircleCommentModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/friendCircle/SendFriendCircleImage": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "朋友圈"
+          ],
+          "summary": "上传朋友圈图片",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SendFriendCircleImage"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/friendCircle/SendFriendCircleVide": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "朋友圈"
+          ],
+          "summary": "上传视频",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SendFriendCircleImage"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/friendCircle/SnsObjectOp": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "朋友圈"
+          ],
+          "summary": "操作朋友圈",
+          "parameters": [
+            {
+              "description": "请求参数type：1删除朋友圈2设为隐私3设为公开4删除评论5取消点赞",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SnsObjectOpModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/friendCircle/SnsSync": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "朋友圈"
+          ],
+          "summary": "同步朋友圈",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.MmSnsSyncModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/friendCircle/SnsTimeLine": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "朋友圈"
+          ],
+          "summary": "获取自己朋友圈内容",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SnsTimeLineModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/friendCircle/SnsUserPage": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "朋友圈"
+          ],
+          "summary": "获取指定人朋友圈",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SnsUserPageModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/label/CreateLabel": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "标签"
+          ],
+          "summary": "创建标签",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.CreateLabelModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/label/DelLabel": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "标签"
+          ],
+          "summary": "删除标签",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.DeleteModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/label/GetLabelList": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "标签"
+          ],
+          "summary": "获取标签列表",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.ReqModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/label/UpdateLabel": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "标签"
+          ],
+          "summary": "更新标签名",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.UpLabelModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/label/UpdateLabelList": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "标签"
+          ],
+          "summary": "修改标签列表",
+          "parameters": [
+            {
+              "description": "ToWxid:多个请用,隔开",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.UpdateListParamModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/login/A16Login": {
+        "post": {
+          "description": "a16登录",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "登录"
+          ],
+          "summary": "A16登录",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.DataDeviceIdLogin"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/login/Authority": {
+        "post": {
+          "description": "账号提权",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "登录"
+          ],
+          "summary": "账号提权",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.AuthorityPrams"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/login/CheckLoginUuId": {
+        "post": {
+          "description": "检测二维码",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "登录"
+          ],
+          "summary": "检测二维码",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.LoginCheckUuId"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/login/Data62Login": {
+        "post": {
+          "description": "62登录",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "登录"
+          ],
+          "summary": "62登录",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.Data62LoginReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/login/Get62Data": {
+        "post": {
+          "description": "获取62数据",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "登录"
+          ],
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.ReqModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/login/GetLoginQRCode": {
+        "post": {
+          "description": "获取登录二维码",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "登录"
+          ],
+          "summary": "获取登录二维码",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.LoginAndroidQRCode"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/login/LogOut": {
+        "post": {
+          "description": "退出登錄",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "登录"
+          ],
+          "summary": "退出登錄",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.ReqModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/login/NewInit": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "登录"
+          ],
+          "summary": "首次登陆初始化",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.ReqModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/login/ScanQrLogin": {
+        "post": {
+          "description": "扫码登录",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "登录"
+          ],
+          "summary": "扫码登录",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.ScanQrLogin"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/login/StartLong": {
+        "post": {
+          "description": "开启长链接",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "登录"
+          ],
+          "summary": "开启长链接",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.LongReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/login/TwiceAutoAuth": {
+        "post": {
+          "description": "二次登录",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "登录"
+          ],
+          "summary": "二次登录",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.TwiceAutoAuth"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/login/setproxy": {
+        "post": {
+          "description": "设置/删除代理IP",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "登录"
+          ],
+          "summary": "设置/删除代理IP",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SetproxyReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/msg/Newsync": {
+        "post": {
+          "description": "数据同步",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "消息管理"
+          ],
+          "summary": "数据同步",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.NewsyncReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/msg/Newsync2": {
+        "post": {
+          "description": "数据同步2",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "消息管理"
+          ],
+          "summary": "数据同步2",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.NewsyncReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/msg/RemindMsg": {
+        "post": {
+          "description": "发送提醒消息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "消息管理"
+          ],
+          "summary": "发送提醒消息",
+          "parameters": [
+            {
+              "description": "请求参数 Ttitle==提醒名 比如(官方提醒) Tcontent == 提醒内容",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.RemindMsgParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/msg/Revoke": {
+        "post": {
+          "description": "撤回消息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "消息管理"
+          ],
+          "summary": "撤回消息",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.RevokeMsgParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/msg/SendAppMsg": {
+        "post": {
+          "description": "发送App消息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "消息管理"
+          ],
+          "summary": "发App消息",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SendAppMsgReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/msg/SendCDNImg": {
+        "post": {
+          "description": "发送Cdn图片(转发图片)",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "消息管理"
+          ],
+          "summary": "发送Cdn图片(转发图片)",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.RevokeMsgParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/msg/SendCDNVideo": {
+        "post": {
+          "description": "发送Cdn视频(转发视频)",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "消息管理"
+          ],
+          "summary": "发送Cdn视频(转发视频)",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.RevokeMsgParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/msg/SendGroupMassMsgText": {
+        "post": {
+          "description": "群发文字",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "消息管理"
+          ],
+          "summary": "群发文字",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SendGroupMassMsgTextParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/msg/SendImg": {
+        "post": {
+          "description": "发送图片",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "消息管理"
+          ],
+          "summary": "发送图片",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SendImageMsgParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/msg/SendShareLinkMsgParam": {
+        "post": {
+          "description": "发送分享链接消息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "消息管理"
+          ],
+          "summary": "发送分享链接消息",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SendShareLinkMsgParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/msg/SendText": {
+        "post": {
+          "description": "发送文本消息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "消息管理"
+          ],
+          "summary": "发文本消息",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SendTextReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/msg/SendTransmitMsg": {
+        "post": {
+          "description": "转发聊天记录",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "消息管理"
+          ],
+          "summary": "转发聊天记录",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SendTransmitParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/msg/SendVoice": {
+        "post": {
+          "description": "发送语音消息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "消息管理"
+          ],
+          "summary": "发语音消息",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SendVoiceReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/msg/ShareCard": {
+        "post": {
+          "description": "分享名片",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "消息管理"
+          ],
+          "summary": "分享名片",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.ShareCardParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/tenPay/CreatePreTransfer": {
+        "post": {
+          "description": "创建转账",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "红包管理"
+          ],
+          "summary": "创建转账",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.CreatePreTransfer"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/tenPay/OpenHongBao": {
+        "post": {
+          "description": "抢红包",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "红包管理"
+          ],
+          "summary": "抢红包",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.HongBaoParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/user/BindingEmail": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "用户管理"
+          ],
+          "summary": "绑定邮箱",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.EmailParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/user/BindingMobile": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "用户管理"
+          ],
+          "summary": "换绑手机号",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.BindMobileParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/user/GeneralSet": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "用户管理"
+          ],
+          "summary": "修改微信号(一年一次)",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.ReviseAlisa"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/user/GetProfile": {
+        "post": {
+          "description": "获取个人信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "用户管理"
+          ],
+          "summary": "获取个人信息",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.ReqModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/user/HeartBeat": {
+        "post": {
+          "description": "获取心跳",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "用户管理"
+          ],
+          "summary": "获取心跳",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.ReqModel"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/user/ModifyHeadImg": {
+        "post": {
+          "description": "修改头像",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "用户管理"
+          ],
+          "summary": "修改头像",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.ModifyHeadImgReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/user/ReportMotion": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "用户管理"
+          ],
+          "summary": "修改步数",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.ReportMotionParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/user/SendVerifyMobile": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "用户管理"
+          ],
+          "summary": "发送手机验证码",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SendVerifyMobileParam"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/user/SetNickName": {
+        "post": {
+          "description": "修改昵称",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "用户管理"
+          ],
+          "summary": "修改昵称",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.NickNameReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/user/SetPwd": {
+        "post": {
+          "description": "设置密码",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "用户管理"
+          ],
+          "summary": "设置密码",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SetPwdReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/user/SetSexDq": {
+        "post": {
+          "description": "修改性别地区",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "用户管理"
+          ],
+          "summary": "修改性别地区",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SetSexDqReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/user/SetSignature": {
+        "post": {
+          "description": "修改个性签名",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "用户管理"
+          ],
+          "summary": "修改个性签名",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.SetSignatureReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/user/UpdateAutoPass": {
+        "post": {
+          "description": "添加好友需要验证属性",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "用户管理"
+          ],
+          "summary": "添加好友需要验证属性",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.UpdateAutoPassReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/user/VerifyPswd": {
+        "post": {
+          "description": "验证密码",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "用户管理"
+          ],
+          "summary": "验证密码",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.VerifyPswdReq"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      },
+      "/user/setWechat": {
+        "post": {
+          "description": "接口详细描述信息",
+          "produces": [
+            "application/json"
+          ],
+          "tags": [
+            "用户管理"
+          ],
+          "summary": "设置微信号",
+          "parameters": [
+            {
+              "description": "请求参数",
+              "name": "param",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/model.Alisa"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "{\"code\":0,\"message\":\"\",\"data\":null}",
+              "schema": {
+                "$ref": "#/definitions/service.RespVo"
+              }
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "model.AddFavParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "object": {
+            "type": "string"
+          },
+          "sourceId": {
+            "type": "string"
+          },
+          "sourceType": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "integer"
+          }
+        }
+      },
+      "model.AddMFriendReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "opcode": {
+            "description": "操作指令(1: 添加好友; 2: 发送好友校验请求),",
+            "type": "integer"
+          },
+          "scene": {
+            "description": "好友来源(1来源QQ2来源邮箱3来源微信号14群聊15手机号17名片18附近的人25漂流瓶29摇一摇30二维码13来源通讯录),",
+            "type": "integer"
+          },
+          "v1": {
+            "type": "string"
+          },
+          "v2": {
+            "type": "string"
+          },
+          "verifyContent": {
+            "description": "请求内容",
+            "type": "string"
+          }
+        }
+      },
+      "model.AddRoomReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "chatRoomName": {
+            "type": "string"
+          },
+          "memberUserNames": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "model.Alisa": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "alisa": {
+            "type": "string"
+          }
+        }
+      },
+      "model.AuthorityPrams": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          }
+        }
+      },
+      "model.BindMobileParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "mobile": {
+            "type": "string"
+          },
+          "verifycode": {
+            "type": "string"
+          }
+        }
+      },
+      "model.CommentParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "objectNonceId": {
+            "type": "string"
+          },
+          "sessionBuffer": {
+            "type": "string"
+          },
+          "username": {
+            "description": "没用到",
+            "type": "string"
+          }
+        }
+      },
+      "model.CreateChatRoomModel": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "chatRoomNickName": {
+            "type": "string"
+          },
+          "members": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "model.CreateLabelModel": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "labelName": {
+            "type": "string"
+          }
+        }
+      },
+      "model.CreatePreTransfer": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "money": {
+            "type": "integer"
+          },
+          "name": {
+            "description": "描述，如：转账",
+            "type": "string"
+          },
+          "toUserName": {
+            "type": "string"
+          }
+        }
+      },
+      "model.Data62LoginReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "data62": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "userName": {
+            "type": "string"
+          },
+          "vpnInfo": {
+            "$ref": "#/definitions/model.VpnInfoS"
+          }
+        }
+      },
+      "model.DataDeviceIdLogin": {
+        "type": "object",
+        "properties": {
+          "a16": {
+            "type": "string"
+          },
+          "account": {
+            "type": "string"
+          },
+          "accountId": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "vpnInfo": {
+            "$ref": "#/definitions/model.VpnInfoS"
+          }
+        }
+      },
+      "model.DefaultParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "finderUsername": {
+            "type": "string"
+          },
+          "lastBuffer": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      },
+      "model.DelFavParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "favId": {
+            "type": "integer"
+          }
+        }
+      },
+      "model.DeleteModel": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "labelId": {
+            "type": "string"
+          }
+        }
+      },
+      "model.EmailParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          }
+        }
+      },
+      "model.EnterGroupByQRCodeUrlReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      },
+      "model.FinderBatchGetObjectAsyncLoadInfoParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "finderUsername": {
+            "type": "string"
+          }
+        }
+      },
+      "model.FinderGetTopicListParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "lastBuffer": {
+            "type": "string"
+          },
+          "topTitle": {
+            "type": "string"
+          }
+        }
+      },
+      "model.FinderLiveDetailParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "finderNonceID": {
+            "type": "string"
+          },
+          "finderObjectID": {
+            "type": "string"
+          }
+        }
+      },
+      "model.FinderSendTextParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "finderUsername": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      },
+      "model.FindergetlivemsgParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "id": {
+            "description": "FinderUsername string",
+            "type": "string"
+          },
+          "objectNonceId": {
+            "type": "string"
+          },
+          "param1": {
+            "type": "string"
+          }
+        }
+      },
+      "model.FlagReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "flag": {
+            "type": "integer"
+          },
+          "toUserName": {
+            "description": "Wxid",
+            "type": "string"
+          }
+        }
+      },
+      "model.FriendDeleteReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "toWxid": {
+            "type": "string"
+          }
+        }
+      },
+      "model.GetA8keyReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "action": {
+            "description": "1:扫码进群,2:扫码加好友,3:新闻文章,4:公众号文章, 5:确认来自于新消息中的异常，去红字,6:识别相册图片进群,7:识别聊天消息图片进群",
+            "type": "integer"
+          },
+          "sourceUserName": {
+            "description": "文章源用户名(如: \"gh_937edc5bd1a7\") // action==4 时必填",
+            "type": "string"
+          },
+          "url": {
+            "description": "分享链接",
+            "type": "string"
+          }
+        }
+      },
+      "model.GetChatroomMembersModel": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "chatRoomName": {
+            "type": "string"
+          }
+        }
+      },
+      "model.GetCommentDetailParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "finderUsername": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "lastBuffer": {
+            "type": "string"
+          },
+          "objectNonceId": {
+            "type": "string"
+          }
+        }
+      },
+      "model.GetContactListModel": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "currentChatRoomContactSeq": {
+            "type": "integer"
+          },
+          "currentWxcontactSeq": {
+            "type": "integer"
+          }
+        }
+      },
+      "model.GetContactReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "toUserName": {
+            "description": "Wxid",
+            "type": "string"
+          }
+        }
+      },
+      "model.GetFavItemParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "favId": {
+            "type": "integer"
+          }
+        }
+      },
+      "model.GetFriendsReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "toUserName": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "model.GetIdDetailParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "id": {
+            "description": "Towxid string",
+            "type": "integer"
+          },
+          "idStr": {
+            "type": "string"
+          }
+        }
+      },
+      "model.GetMFriendReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "mobiles": {
+            "description": "联系人电话号码(此项不填表示获取全部)",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "model.GetRecommendParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          }
+        }
+      },
+      "model.GetkeyParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "appid": {
+            "type": "string"
+          },
+          "jsapiList": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "nonceStr": {
+            "type": "string"
+          },
+          "signature": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      },
+      "model.GroupListParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          }
+        }
+      },
+      "model.HongBaoParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "qid": {
+            "type": "string"
+          },
+          "xml": {
+            "type": "string"
+          }
+        }
+      },
+      "model.InviteChatroomMembersModel": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "chatRoomName": {
+            "type": "string"
+          },
+          "members": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "model.JsLoginReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "appid": {
+            "type": "string"
+          }
+        }
+      },
+      "model.LbsFindParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "latitude": {
+            "type": "number"
+          },
+          "longitude": {
+            "type": "number"
+          },
+          "opCode": {
+            "description": "OpCode == 没有特殊情况请填1\"",
+            "type": "integer"
+          }
+        }
+      },
+      "model.LikeParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "commentId": {
+            "description": "評論id",
+            "type": "string"
+          },
+          "finderUsername": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "objectNonceId": {
+            "type": "string"
+          },
+          "optype": {
+            "description": "3視頻  1評論  2取消",
+            "type": "integer"
+          },
+          "sessionBuffer": {
+            "type": "string"
+          }
+        }
+      },
+      "model.LoginAndroidQRCode": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "vpnInfo": {
+            "$ref": "#/definitions/model.VpnInfoS"
+          }
+        }
+      },
+      "model.LoginCheckUuId": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "uuId": {
+            "type": "string"
+          }
+        }
+      },
+      "model.LongReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          }
+        }
+      },
+      "model.Messagearameter": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "blackList": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "isvideo": {
+            "type": "boolean"
+          },
+          "withUserList": {
+            "type": "string"
+          }
+        }
+      },
+      "model.MmSnsSyncModel": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "synckey": {
+            "type": "string"
+          }
+        }
+      },
+      "model.ModifyHeadImgReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "base64": {
+            "type": "string"
+          }
+        }
+      },
+      "model.NewsyncReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "syncKey": {
+            "type": "string"
+          }
+        }
+      },
+      "model.NickNameReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "nickName": {
+            "type": "string"
+          }
+        }
+      },
+      "model.PassVerifyReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "scene": {
+            "description": "消息返回",
+            "type": "integer"
+          },
+          "v1": {
+            "description": "v1 v3",
+            "type": "string"
+          },
+          "v2": {
+            "description": "v2  v4",
+            "type": "string"
+          }
+        }
+      },
+      "model.QuitChatroomModel": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "chatRoomName": {
+            "type": "string"
+          }
+        }
+      },
+      "model.ReadUrlReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      },
+      "model.RemindMsgParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "tcontent": {
+            "type": "string"
+          },
+          "toUserName": {
+            "type": "string"
+          },
+          "ttitle": {
+            "type": "string"
+          }
+        }
+      },
+      "model.ReportMotionParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "stepCount": {
+            "description": "DeviceId   string\n\tDeviceType string",
+            "type": "integer"
+          }
+        }
+      },
+      "model.ReqModel": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          }
+        }
+      },
+      "model.ReviseAlisa": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "newsAlisa": {
+            "type": "string"
+          },
+          "pwdTicket": {
+            "type": "string"
+          },
+          "safeTicket": {
+            "type": "string"
+          }
+        }
+      },
+      "model.RevokeMsgParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "clientMsgId": {
+            "type": "integer"
+          },
+          "createTime": {
+            "type": "integer"
+          },
+          "newMsgId": {
+            "type": "integer"
+          },
+          "toUserName": {
+            "type": "string"
+          }
+        }
+      },
+      "model.SayHelloOneReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          }
+        }
+      },
+      "model.ScanQrLogin": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "pwd": {
+            "type": "string"
+          },
+          "userName": {
+            "type": "string"
+          }
+        }
+      },
+      "model.SearchContactReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "toUserName": {
+            "description": "目标手机号,wxid",
+            "type": "string"
+          }
+        }
+      },
+      "model.SendAppMsgReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "des": {
+            "description": "描述",
+            "type": "string"
+          },
+          "title": {
+            "description": "标题",
+            "type": "string"
+          },
+          "toUserName": {
+            "description": "接收的好友",
+            "type": "string"
+          },
+          "url": {
+            "description": "地址",
+            "type": "string"
+          }
+        }
+      },
+      "model.SendFriendCircleCommentModel": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "replyCommentId": {
+            "type": "integer"
+          },
+          "sendType": {
+            "type": "integer"
+          },
+          "toWxId": {
+            "type": "string"
+          }
+        }
+      },
+      "model.SendFriendCircleImage": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "base64": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "model.SendGroupMassMsgTextParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "toUserName": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "model.SendImageMsgParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "picFilePath": {
+            "type": "string"
+          },
+          "toUserName": {
+            "type": "string"
+          }
+        }
+      },
+      "model.SendShareLinkMsgParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "desc": {
+            "type": "string"
+          },
+          "thumbUrl": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "toUserName": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      },
+      "model.SendTextReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "content": {
+            "description": "内容",
+            "type": "string"
+          },
+          "toUserName": {
+            "description": "接收的好友",
+            "type": "string"
+          }
+        }
+      },
+      "model.SendTransmitParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "toUserName": {
+            "type": "string"
+          },
+          "xml": {
+            "type": "string"
+          }
+        }
+      },
+      "model.SendVerifyMobileParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "mobile": {
+            "type": "string"
+          },
+          "opcode": {
+            "type": "integer"
+          }
+        }
+      },
+      "model.SendVoiceReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "toUserName": {
+            "description": "接收的好友",
+            "type": "string"
+          },
+          "voiceFilePath": {
+            "type": "string"
+          },
+          "voiceLength": {
+            "description": "语音长度",
+            "type": "integer"
+          }
+        }
+      },
+      "model.SessionReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "appId": {
+            "type": "string"
+          }
+        }
+      },
+      "model.SetPwdReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "pwdMd5": {
+            "type": "string"
+          },
+          "ticket": {
+            "type": "string"
+          }
+        }
+      },
+      "model.SetRemaekReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "remarks": {
+            "type": "string"
+          },
+          "toUserName": {
+            "description": "目标手机号,wxid",
+            "type": "string"
+          }
+        }
+      },
+      "model.SetSexDqReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "city": {
+            "description": "市级：Guangzhou",
+            "type": "string"
+          },
+          "country": {
+            "description": "国家：CN",
+            "type": "string"
+          },
+          "province": {
+            "description": "省份：Guangdong",
+            "type": "string"
+          },
+          "sex": {
+            "description": "性别:system未知，boy男，girl女",
+            "type": "string"
+          }
+        }
+      },
+      "model.SetSignatureReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "signature": {
+            "type": "string"
+          }
+        }
+      },
+      "model.SetproxyReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "vpnInfo": {
+            "$ref": "#/definitions/model.VpnInfoS"
+          }
+        }
+      },
+      "model.ShareCardParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "cardAlias": {
+            "type": "string"
+          },
+          "cardNickName": {
+            "type": "string"
+          },
+          "cardWxId": {
+            "type": "string"
+          },
+          "toUserName": {
+            "type": "string"
+          }
+        }
+      },
+      "model.SnsObjectOpModel": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "commnetId": {
+            "type": "integer"
+          },
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "integer"
+          }
+        }
+      },
+      "model.SnsPostItemModel": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "bufferUrl": {
+            "type": "string"
+          },
+          "contentType": {
+            "type": "integer"
+          },
+          "height": {
+            "type": "integer"
+          },
+          "picMd5": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "thumbUrl": {
+            "type": "string"
+          },
+          "totalLen": {
+            "type": "integer"
+          },
+          "width": {
+            "type": "integer"
+          }
+        }
+      },
+      "model.SnsTimeLineModel": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "firstPageMd5": {
+            "type": "string"
+          },
+          "maxId": {
+            "type": "integer"
+          }
+        }
+      },
+      "model.SnsUserPageModel": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "firstPageMd5": {
+            "type": "string"
+          },
+          "maxId": {
+            "type": "integer"
+          },
+          "toUserName": {
+            "type": "string"
+          }
+        }
+      },
+      "model.SyncParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "keybuf": {
+            "type": "string"
+          }
+        }
+      },
+      "model.TargetUserPageParam": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "lastBuffer": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          }
+        }
+      },
+      "model.TwiceAutoAuth": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          }
+        }
+      },
+      "model.TxVoteReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "action": {
+            "description": "1:投票",
+            "type": "integer"
+          },
+          "option": {
+            "description": "单个或多个option数组，数组数量必需和阅读文中投票项目数量相同，顺序也需相同，多个数组用英文逗号隔开，例如上面[0,1,6]是一个数组，[5]也是一个数组，两个数组用逗号隔开",
+            "type": "string"
+          },
+          "url": {
+            "description": "分享链接",
+            "type": "string"
+          }
+        }
+      },
+      "model.UpLabelModel": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "labelId": {
+            "type": "integer"
+          },
+          "labelName": {
+            "type": "string"
+          }
+        }
+      },
+      "model.UpdateAutoPassReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "switchType": {
+            "description": "\"1需要 2不需要，\"",
+            "type": "integer"
+          }
+        }
+      },
+      "model.UpdateChatroomAnnouncementModel": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "chatRoomName": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        }
+      },
+      "model.UpdateListParamModel": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "labelID": {
+            "type": "string"
+          },
+          "toWxids": {
+            "type": "string"
+          }
+        }
+      },
+      "model.UploadContractReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "contactMobiles": {
+            "description": "联系人电话号码(此项不填表示获取全部)",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mobile": {
+            "description": "本帐号关联的手机号",
+            "type": "string"
+          }
+        }
+      },
+      "model.VerifyPswdReq": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "pwdMd5": {
+            "type": "string"
+          }
+        }
+      },
+      "model.VpnInfoS": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "port": {
+            "type": "integer"
+          }
+        }
+      },
+      "service.RespVo": {
+        "type": "object",
+        "properties": {
+          "MSG": {
+            "type": "object"
+          },
+          "code": {
+            "type": "object"
+          },
+          "data": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
